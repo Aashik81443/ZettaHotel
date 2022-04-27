@@ -12867,9 +12867,14 @@ iframe {
 
 .site-footer__info .social-links ul li a {
   color: #fff;
-  padding: 0.0625rem 0.3438rem;
   font-size: 1.5rem;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 0.5rem;
 }
 
 .site-footer__info .social-links ul li a:focus, .site-footer__info .social-links ul li a:hover {
