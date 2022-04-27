@@ -12504,18 +12504,6 @@ iframe {
   right: 50.4%;
 }
 
-@media (min-width: 992px) {
-  .banner-slider .slick-prev {
-    right: 13.7%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .banner-slider .slick-prev {
-    right: 24.9%;
-  }
-}
-
 .banner-slider .slick-prev:before {
   content: '\e900';
 }
@@ -12523,18 +12511,6 @@ iframe {
 .banner-slider .slick-next {
   right: auto;
   left: 50.4%;
-}
-
-@media (min-width: 992px) {
-  .banner-slider .slick-next {
-    left: 85.1%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .banner-slider .slick-next {
-    left: 75.2%;
-  }
 }
 
 .banner-slider .slick-next:before {
