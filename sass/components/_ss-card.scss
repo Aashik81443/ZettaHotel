@@ -39,6 +39,114 @@
         }
     }
 
+    &-menu {
+        background-color: $gray-3;
+        height: 100%;
+        position: relative;
+        padding: 1rem;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        &__content {
+            padding: 1rem 0;
+            line-height: 21px;
+            @include font-size(0.875rem);
+            color: $gray-1;
+
+            @include media-breakpoint-up(md) {
+                max-width: 260px;
+                padding: 1rem 1.5rem;
+                text-align: left;
+            }
+
+            h3 {
+                @include font-size(1rem);
+                font-weight: 600;
+                color: $black;
+                margin-bottom: 0.8rem;
+
+                @include media-breakpoint-up(lg) {
+                    @include font-size(1.125rem);
+                }
+
+                span {
+                    display: block;
+                    @include font-size(0.875rem);
+                    color: $soft-blue;
+                    margin-bottom: 0.5rem;
+                    text-transform: uppercase;
+                }
+            }
+
+            i {
+                background-color: $soft-blue;
+                line-height: 1;
+                color: $white;
+                padding: 0.75rem;
+                margin-top: 0.5rem;
+                display: inline-block;
+                transition: all 0.3s;
+
+                @include media-breakpoint-up(md) {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                &:focus,
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+        &--alt {
+            .card-menu__content {
+                i {
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        height: 100%;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        width: 50px;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        width: 60px;
+                        // height: 60px;
+                    }
+                }
+            }
+        }
+    }
+
     &-food {
         background-color: $gray-3;
         height: 100%;
@@ -88,6 +196,7 @@
                 align-items: center;
                 padding: 0;
             }
+
             .card-food__content {
                 padding: 1rem 0;
 
@@ -105,6 +214,7 @@
                     margin-top: 0.5rem;
                     display: inline-block;
                     transition: all 0.3s;
+
                     @include media-breakpoint-up(md) {
                         position: absolute;
                         right: 0;
@@ -127,12 +237,13 @@
                     }
 
                     &:focus,
-                    &:hover{
+                    &:hover {
                         color: $black;
                     }
                 }
             }
         }
+
         &--lg {
             position: relative;
             padding: 1rem;
@@ -146,6 +257,7 @@
                 align-items: center;
                 padding: 0;
             }
+
             .card-food__content {
                 padding: 1rem 0;
 
@@ -164,6 +276,7 @@
                     display: inline-block;
                     transition: all 0.3s;
                     width: 100%;
+
                     @include media-breakpoint-up(md) {
                         position: absolute;
                         right: 0;
@@ -185,7 +298,7 @@
                     }
 
                     &:focus,
-                    &:hover{
+                    &:hover {
                         color: $black;
                     }
                 }

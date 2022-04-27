@@ -11964,6 +11964,128 @@ iframe {
   }
 }
 
+.card-menu {
+  background-color: #F8F8F8;
+  height: 100%;
+  position: relative;
+  padding: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .card-menu {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.card-menu__content {
+  padding: 1rem 0;
+  line-height: 21px;
+  font-size: 0.875rem;
+  color: #B1B1B1;
+}
+
+@media (min-width: 768px) {
+  .card-menu__content {
+    max-width: 260px;
+    padding: 1rem 1.5rem;
+    text-align: left;
+  }
+}
+
+.card-menu__content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .card-menu__content h3 {
+    font-size: 1.125rem;
+  }
+}
+
+.card-menu__content h3 span {
+  display: block;
+  font-size: 0.875rem;
+  color: #5863F8;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card-menu__content i {
+  background-color: #5863F8;
+  line-height: 1;
+  color: #fff;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+@media (min-width: 768px) {
+  .card-menu__content i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-menu__content i {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-menu__content i {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.card-menu__content i:focus, .card-menu__content i:hover {
+  color: #000;
+}
+
+@media (max-width: 767.98px) {
+  .card-menu--alt .card-menu__content i {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-menu--alt .card-menu__content i {
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-menu--alt .card-menu__content i {
+    width: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-menu--alt .card-menu__content i {
+    width: 60px;
+  }
+}
+
 .card-food {
   background-color: #F8F8F8;
   height: 100%;
