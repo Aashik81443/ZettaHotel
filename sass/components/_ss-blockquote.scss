@@ -1,0 +1,39 @@
+.blockquote {
+    @include font-size(0.875rem);
+    font-weight: 500;
+    color: $black;
+    padding: 1rem;
+    max-width: 352px;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @include media-breakpoint-down(md){
+        margin: 0 auto;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &-media {
+        display: inline-block;
+        border-radius: 50%;
+    }
+
+    &-author {
+        padding-left: 1rem;
+        h3 {
+            @include font-size(1.125rem);
+            font-weight: 600;
+            color: $black;
+            margin-bottom: 0;
+
+            small {
+                display: block;
+                @include font-size(0.75rem);
+                font-weight: 600;
+                color: $gray-1;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+//about
+.two-col {
+    &__wrap {
+        margin-right: -8px;
+        margin-left: -8px;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        [class*='col-'] {
+            padding-right: 8px;
+            padding-left: 8px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__gap {
+        margin-right: -8px;
+        margin-left: -8px;
+
+        [class*='col-'] {
+            padding-right: 8px;
+            padding-left: 8px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__content {
+        @include font-size(0.875rem);
+        line-height: 25px;
+        color: $black;
+        max-width: 444px;
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(1rem);
+        }
+    }
+}
+
+//form-holder
+.form-holder {
+    @include media-breakpoint-up(lg) {
+        margin-top: -80px;
+        position: relative;
+        z-index: 99;
+    }
+}
+
+//rooms-form
+.rooms-form {
+    background-color: $gray-3;
+}
+
+//map
+.map {
+    iframe {
+        min-height: 200px;
+
+        @include media-breakpoint-up(md) {
+            min-height: 250px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-height: 286px;
+        }
+    }
+}
+
+//contact-form
+.contact-form {
+    .form-1 {
+        .form-group {
+            textarea {
+                resize: none;
+                height: 150px;
+
+                @include media-breakpoint-up(md) {
+                    height: 180px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    height: 210px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    height: 288px;
+                }
+            }
+        }
+
+        .form-control {
+            border-radius: 0;
+            background-color: $gray-3;
+            border-color: #E8E8E8;
+            height: 40px;
+
+            @include media-breakpoint-up(xl) {
+                height: 50px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 60px;
+            }
+
+            &::placeholder {
+                color: $gray-1;
+                @include font-size(0.8125rem);
+            }
+        }
+
+        .form-wrap {
+            button {
+                height: 40px;
+
+                @include media-breakpoint-up(xl) {
+                    height: 50px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    height: 60px;
+                }
+
+            }
+        }
+    }
+}

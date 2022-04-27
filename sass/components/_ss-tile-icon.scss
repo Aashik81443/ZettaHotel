@@ -1,0 +1,36 @@
+.tile-icon {
+    padding: 1rem;
+    i {
+        background-color: $soft-blue;
+        padding: 1.2813rem;
+        border-radius: 50%;
+        color: $white;
+        margin-bottom: 1.1rem;
+        display: inline-block;
+    }
+
+    h3 {
+        @include font-size(1.125rem);
+        text-transform: capitalize;
+        color: $black;
+        font-weight: 600;
+    }
+
+    &__links {
+        line-height: 21px;       
+        a {
+            @include font-size(0.875rem);
+            font-weight: 500;
+            color: $gray-1;
+            display: block;
+            transition: all 0.3s;
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: $soft-blue;
+            }
+        }
+    }
+
+}

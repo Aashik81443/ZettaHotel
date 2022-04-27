@@ -1,0 +1,107 @@
+//gallery-slider
+.gallery {
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &-slider {
+        @include media-breakpoint-down(md) {
+            padding-bottom: 45px;
+        }
+
+        &__item {
+
+            @include media-breakpoint-down(md) {
+                padding-bottom: 1rem;
+                padding: 0.5rem;
+            }
+        }
+
+        .slick {
+            &-arrow {
+                font-size: 0;
+                line-height: 1;
+                border: 0;
+                border-radius: 0px;
+                background-color: $soft-blue;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                z-index: 5;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+
+                @include media-breakpoint-up(xl) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    margin: 0.2rem;
+                }
+
+                &:focus,
+                &:hover {
+                    outline: 0;
+                }
+
+                &:before {
+                    content: ' ';
+                    font-family: 'icomoon';
+                    @include font-size(1.4375rem);
+                    color: $black;
+                    // color: $soft-red-1;
+                }
+            }
+
+            &-prev {
+                left: auto;
+                right: 50.4%;
+
+                @include media-breakpoint-up(lg) {
+                    right: auto;
+                    left: 50px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+
+                &:before {
+                    content: '\e900';
+                }
+            }
+
+            &-next {
+                right: auto;
+                left: 50.4%;
+
+                @include media-breakpoint-up(lg) {
+                    right: 50px;
+                    left: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:before {
+                    content: '\e901';
+                }
+            }
+
+            &-track {
+                display: flex;
+            }
+
+            &-slide {
+                height: inherit;
+                position: relative;
+            }
+
+            &-disabled{
+                background-color: rgba($white, 0.3);
+            }
+        }
+    }
+}

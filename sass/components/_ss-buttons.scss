@@ -1,0 +1,62 @@
+.btn {
+    @include font-size(0.875rem);
+    border: 1px solid transparent;
+    background-color: $soft-blue;
+    border-radius: 0;
+    color: $white;
+    transition: all 0.3s;
+
+    i {
+        position: relative;
+        line-height: 1;
+        top: 2px;
+        padding-left: 6px;
+    }
+
+    &.btn-primary {
+        min-width: 150px;
+        padding: 0.5rem;
+
+        @include media-breakpoint-up(md) {
+            min-width: 160px;
+            padding: 0.6438rem 0.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 165px;
+            padding: 0.7438rem 0.5rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            min-width: 184px;
+            padding: 0.8438rem 0.5rem;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: $white;
+            border-color: $soft-blue;
+            color: $soft-blue;
+        }
+
+        &--alt {
+            min-width: 180px;
+            padding: 0.6rem;
+
+            @include media-breakpoint-up(md) {
+                min-width: 200px;
+                padding: 0.8438rem 0.5rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                min-width: 230px;
+                padding: 1rem 0.5rem;
+            }
+
+            @include media-breakpoint-up(xl) {
+                min-width: 260px;
+                padding: 1.1563rem 0.5rem;
+            }
+        }
+    }
+}

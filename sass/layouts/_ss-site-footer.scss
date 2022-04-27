@@ -1,0 +1,148 @@
+.site-footer {
+    background-color: $black-1;
+
+    &__info {
+        color: $gray-1;
+        @include font-size(0.875rem);
+        font-weight: 500;
+        max-width: 260px;
+
+        .social-links {
+            ul {
+                padding-left: 0;
+
+                li {
+                    list-style-type: none;
+                    display: inline-block;
+                    margin-right: 0.5rem;
+
+                    a {
+                        color: $white;
+                        // background-color: $soft-blue;
+                        padding: 0.0625rem 0.3438rem;
+                        @include font-size(1.5rem);
+                        border-radius: 50%;
+
+                        &:focus,
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__widgets,
+    &__contact {
+        h3 {
+            @include font-size(1.125rem);
+            color: $white;
+            font-weight: 600;
+        }
+    }
+
+    &__widgets {
+        ul {
+            padding-left: 0;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $soft-blue;
+                    @include font-size(0.875rem);
+                    font-weight: 500;
+                    transition: all 0.3s;
+
+                    &:focus,
+                    &:hover {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__contact {
+        ul {
+            padding-left: 0;
+
+            li {
+                list-style-type: none;
+                position: relative;
+                padding-left: 1.5rem;
+
+                a {
+                    color: $white;
+                    @include font-size(0.875rem);
+                    font-weight: 500;
+                    transition: all 0.3s;
+
+                    &:focus,
+                    &:hover {
+                        text-decoration: none;
+                        color: $soft-blue;
+
+                        i {
+                            color: $white;
+                        }
+                    }
+
+                    i {
+                        color: $soft-blue;
+                        transition: all 0.3s;
+                        position: absolute;
+                        top: 12px;
+                        left: 0;
+                        @include font-size(0.875rem);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        span {
+            @include font-size(0.875rem);
+            color: $gray-1;
+            font-weight: 500;
+            line-height: 1.3;
+            display: block;
+
+            a {
+                color: $soft-blue;
+                margin-left: 0.5rem;
+
+                &:focus,
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+
+        .email {
+            a {
+                @include font-size(0.875rem);
+                color: $soft-blue;
+
+                &:focus,
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

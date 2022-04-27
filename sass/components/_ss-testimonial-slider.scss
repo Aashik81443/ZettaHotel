@@ -1,0 +1,264 @@
+//testimonial
+.testimonial {
+    background-color: $gray-3;
+
+    .block-media {
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-right: -8.75rem;
+        }
+
+        img {
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-slider {
+        &__item {
+
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 2rem;
+            }
+        }
+
+        .slick {
+            &-dots {
+                display: flex;
+                justify-content: center;
+                list-style-type: none;
+                padding-left: 0;
+                bottom: 0;
+                line-height: 1;
+
+                @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    left: 0;
+                    padding-left: 1.5rem;
+
+                }
+
+                button {
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    outline: none;
+                    box-shadow: none;
+                    @include font-size(0);
+                    padding: 0;
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    position: relative;
+                    z-index: 1;
+                    transition: .3s ease-in-out;
+
+
+                    &::before {
+                        position: absolute;
+                        z-index: -1;
+                        content: '';
+                        top: 50%;
+                        left: 50%;
+                        height: 10px;
+                        width: 10px;
+                        background: $gray-1;
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%);
+
+                    }
+                }
+            }
+
+            &-active {
+                button {
+                    // border: 1px solid rgba(125, 125, 128, 0.671);
+
+                    &::before {
+                        background: $soft-blue;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+
+            &-arrow {
+                font-size: 0;
+                line-height: 1;
+                border: 0;
+                border-radius: 0px;
+                background-color: $soft-blue;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                bottom: -12px;
+                z-index: 5;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+
+                @include media-breakpoint-up(xl) {
+                    width: 60px;
+                    height: 60px;
+                    bottom: 0;
+
+                }
+
+                @include media-breakpoint-down(lg) {
+                    display: none !important;
+                }
+
+                &:focus,
+                &:hover {
+                    outline: 0;
+                    background-color: $white;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                }
+
+                &:before {
+                    content: ' ';
+                    font-family: 'icomoon';
+                    @include font-size(1.4375rem);
+                    color: $black;
+                }
+            }
+
+            &-prev {
+                right: 0;
+                border-right: 0.3px solid $white;
+
+                &:before {
+                    content: '\e900';
+                }
+            }
+
+            &-next {
+                right: 0;
+                transform: translateX(100%);
+
+                &:before {
+                    content: '\e901';
+                }
+            }
+
+            &-track {
+                display: flex;
+            }
+
+            &-slide {
+                height: inherit;
+            }
+
+            &-slider {
+                position: static;
+            }
+            &-disabled{
+                background-color: $white;
+            }
+        }
+    }
+}
+
+//banner
+.banner {
+    &-slider {
+
+        &__item {
+            padding: 0.75rem;
+        }
+
+        .slick {
+            &-arrow {
+                font-size: 0;
+                line-height: 1;
+                border: 0;
+                background-color: $soft-blue;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                z-index: 5;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+
+
+                @include media-breakpoint-down(lg) {
+                    margin: 0.5rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    width: 50px;
+                    height: 50px;
+                    top: calc(100% - 88px);
+                    transform: translateY(-100%);
+                }
+
+                @include media-breakpoint-up(xl) {
+                    width: 60px;
+                    height: 60px;
+                    top: calc(100% - 80px);
+                    transform: translateY(-100%);
+                }
+
+                &:focus,
+                &:hover {
+                    outline: 0;
+                    background-color: $white;
+                }
+
+                &:before {
+                    content: ' ';
+                    font-family: 'icomoon';
+                    @include font-size(1.4375rem);
+                    color: $black;
+                    // color: $soft-red-1;
+                }
+            }
+
+            &-prev {
+                left: auto;
+                right: 50.4%;
+
+                @include media-breakpoint-up(lg){
+                    right: 13.7%;
+                }
+                @include media-breakpoint-up(xl){
+                    right: 24.4%;
+                }
+
+                &:before {
+                    content: '\e900';
+                }
+            }
+
+            &-next {
+                right: auto;
+                left: 50.4%;
+
+                @include media-breakpoint-up(lg){
+                    left: 85.1%;
+                }
+                @include media-breakpoint-up(xl){
+                    left: 75.7%;
+                }
+
+                &:before {
+                    content: '\e901';
+                }
+            }
+
+            &-track {
+                display: flex;
+            }
+
+            &-slide {
+                height: inherit;
+            }
+            &-disabled{
+                background-color: $white;
+            }
+        }
+    }
+}

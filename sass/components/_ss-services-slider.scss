@@ -1,0 +1,98 @@
+.services {
+    &-slider {
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 45px;
+        }
+
+        &__item {
+            padding: 0.75rem;
+        }
+
+        .slick {
+            &-arrow {
+                font-size: 0;
+                line-height: 1;
+                border: 0;
+                background-color: $white;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                z-index: 5;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+
+                @include media-breakpoint-up(xl) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+
+                &:focus,
+                &:hover {
+                    outline: 0;
+                }
+
+                &:before {
+                    content: ' ';
+                    font-family: 'icomoon';
+                    @include font-size(0.9375rem);
+                    color: $soft-blue;
+                    // color: $soft-red-1;
+                }
+            }
+
+            &-prev {
+                left: auto;
+                right: 50.4%;
+
+                @include media-breakpoint-up(xl) {
+                    right: auto;
+                    left: -80px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    margin-right: 0.2rem;
+                }
+
+                &:before {
+                    content: '\e900';
+                }
+            }
+
+            &-next {
+                right: auto;
+                left: 50.4%;
+
+                @include media-breakpoint-up(xl) {
+                    right: -80px;
+                    left: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 0.2rem;
+                }
+
+                &:before {
+                    content: '\e901';
+                }
+            }
+
+            &-track {
+                display: flex;
+            }
+
+            &-slide {
+                height: inherit;
+            }
+            &-disabled{
+                background-color: rgba($white, 0.3);
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+//block-title
+.block-title {
+    h2 {
+        @include font-size(1.5rem);
+        font-weight: 800;
+        color: $black;
+
+        @include media-breakpoint-up(md) {
+            @include font-size(1.8rem);
+        }
+        @include media-breakpoint-up(lg) {
+            @include font-size(2.225rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include font-size(2.625rem);
+        }
+
+        small {
+            display: block;
+            @include font-size(0.875rem);
+            font-weight: 700;
+            color: $soft-blue;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        br{
+            display: none;
+
+            @include media-breakpoint-up(lg){
+                display: block;
+            }
+        }
+    }
+
+    &--alt{
+        h2{
+            color: $white;
+        }
+    }
+}
