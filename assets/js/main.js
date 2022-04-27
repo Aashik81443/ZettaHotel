@@ -137,7 +137,14 @@ $(document).ready(function () {
     });
 
     //minDate and maxDate Example
-    $('#datepicker').datetimepicker({
+    $('#checkInDate').datetimepicker({
+        format: 'Y-m-d',
+        timepicker: false,
+        //minDate: '-1970/01/02', //yesterday is minimum date
+        //maxDate: '+1970/01/02' //tomorrow is maximum date
+    });
+    //minDate and maxDate Example
+    $('#checkOutDate').datetimepicker({
         format: 'Y-m-d',
         timepicker: false,
         //minDate: '-1970/01/02', //yesterday is minimum date
