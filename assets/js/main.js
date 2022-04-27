@@ -118,11 +118,13 @@ $(document).ready(function () {
         ]
     });
 
-        //gallery-slider
+        //banner-slider
         $('.banner-slider').slick({
             infinite: false,
             dots: false,
             arrows: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
             slidesToShow: 1,
             adaptiveHeight: true,
             slidesToScroll: 1,          
