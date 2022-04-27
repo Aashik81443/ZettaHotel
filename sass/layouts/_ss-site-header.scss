@@ -43,14 +43,19 @@
                     }
                 }
             }
-            &.dropdown{
+
+            &.dropdown {
                 transition: all 0.3s;
-                .dropdown-menu{
+
+                .dropdown-menu {
                     margin-top: 0;
+                    border-radius: 0;
+                    padding: 0;
                 }
+
                 &:focus,
-                &:hover{
-                    .dropdown-menu{
+                &:hover {
+                    .dropdown-menu {
                         display: block
                     }
                 }
@@ -77,6 +82,7 @@
 
     &-toggler {
         padding: 0.25rem 0rem;
+
         span {
             display: block;
             width: 30px;
